@@ -1,5 +1,5 @@
 {
-    "name": "webman/installer",
+    "name": "jaguarjack/webman-installer",
     "description": "webman application installer.",
     "keywords": ["webman"],
     "license": "MIT",
