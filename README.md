@@ -3,7 +3,7 @@ Webman 安装器，简化 Webman 安装过程。支持一键安装 webman admin 
 
 ## 如何安装
 ```shell
-composer global require webman/installer
+composer global -W require jaguarjack/webman-installer
 ```
 
 ## 如何使用

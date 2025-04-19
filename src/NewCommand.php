@@ -154,11 +154,15 @@ class NewCommand extends Command
 
         $output->writeln("  <bg=blue;fg=white> 信息 </> 启动项目".PHP_EOL);
 
+        if ($this->isIntallAdmin) {
+            $output->writeln("  <bg=blue;fg=white> 信息 </> 后台管理地址: http://127.0.0.1:8787/app/admin".PHP_EOL);
+        }
+
         if ($process = $this->runCommands([
             "cd {$directory}",
             PHP_OS_FAMILY == 'Windows' ? $this->phpBinary() . ' windows.php' : $this->phpBinary() . ' start.php start',
         ], $input, $output)) {
-            $output->writeln('测试项目地址: http://127.0.0.1:8080');
+           //  $output->writeln('测试项目地址: http://127.0.0.1:8080');
         }
 
         return $process->getExitCode();
