@@ -1,0 +1,43 @@
+{
+    "name": "webman/installer",
+    "description": "webman application installer.",
+    "keywords": ["webman"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JaguarJack",
+            "email": "njphper@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/filesystem": "^10.20",
+        "illuminate/support": "^10.20",
+        "laravel/prompts": "^0.1",
+        "symfony/console": "^6.0",
+        "symfony/process": "^6.0",
+        "webman/admin": "~2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.3"
+    },
+    "bin": [
+        "bin/webman"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Webman\\Installer\\Console\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webman\\Installer\\Console\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
